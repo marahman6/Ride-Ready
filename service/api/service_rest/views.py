@@ -65,8 +65,6 @@ def detail_technicians(request, pk):
         )
 
     else:
-        # count, _ = Technician.objects.filter(id=pk).delete()
-        # return JsonResponse({"deleted": count > 0})
         try:
             technician = Technician.objects.get(id=pk)
             technician.delete()
@@ -136,8 +134,6 @@ def detail_appointments(request, pk):
                 encoder=AppointmentEncoder,
                 safe=False
             )
-            # count, _ = Appointment.objects.filter(id=pk).delete()
-            # return JsonResponse({"deleted": count > 0})
         except Appointment.DoesNotExist:
             return JsonResponse(
                 {"message": "Invalid Appointment id"},
@@ -147,7 +143,6 @@ def detail_appointments(request, pk):
     else:
         try:
             content = json.loads(request.body)
-            # Appointment.objects.filter(id=pk).update(status=content["status"])
             Appointment.objects.filter(id=pk).update(**content)
             appointment = Appointment.objects.get(id=pk)
             return JsonResponse(
@@ -164,7 +159,6 @@ def detail_appointments(request, pk):
 @require_http_methods(["PUT"])
 def cancel_appointments(request, pk):
     if request.method == "PUT":
-        # content = json.loads(request.body)
         try:
             Appointment.objects.filter(id=pk).update(status="canceled")
             appointment = Appointment.objects.get(id=pk)
@@ -183,7 +177,6 @@ def cancel_appointments(request, pk):
 @require_http_methods(["PUT"])
 def finish_appointments(request, pk):
     if request.method == "PUT":
-        # content = json.loads(request.body)
         try:
             Appointment.objects.filter(id=pk).update(status="finished")
             appointment = Appointment.objects.get(id=pk)

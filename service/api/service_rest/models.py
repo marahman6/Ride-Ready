@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Technician(models.Model):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
@@ -13,14 +13,9 @@ class AutomobileVO(models.Model):
 
 
 class Appointment(models.Model):
-    # STATUS_CHOICES = (
-    #     ('FINISH', 'Finish'),
-    #     ('CANCEL', 'Cancel'),
-    #     ('CREATED', 'Created'),
-    # )
+
     date_time = models.DateTimeField()
     reason = models.CharField(max_length=300)
-    # status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='CREATED')
     status = models.CharField(max_length=20, default="created")
     vin = models.CharField(max_length=17, unique=True)
     customer = models.CharField(max_length=150)
