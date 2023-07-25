@@ -28,6 +28,7 @@ class AppointmentEncoder(ModelEncoder):
         "status",
         "vin",
         "customer",
+        "is_vip",
         "technician",
     ]
     encoders = {
@@ -86,6 +87,13 @@ def detail_technicians(request, pk):
 def list_appointments(request):
     if request.method == "GET":
         appointments = Appointment.objects.all()
+        for appointment in appointments:
+            try:
+                AutomobileVO.objects.get(vin=appointment.vin)
+                appointment.is_vip = True
+            except AutomobileVO.DoesNotExist:
+                appointment.is_vip = False
+
         return JsonResponse(
             {"appointments": appointments},
             encoder=AppointmentEncoder,
