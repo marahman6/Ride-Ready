@@ -17,45 +17,60 @@ function ServiceAppts() {
         fetchData();
     }, []);
 
-    const handleCancelAppointment = (apptID) => {
-        const updatedAppointments = appointments.map(appointment => {
-            if (appointment.id === apptID) {
-              return { ...appointment, status: "canceled"};
+    const handleCancelAppointment = async (apptID) => {
+        await fetch(`http://localhost:8080/api/appointments/${apptID}/cancel/`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        .then(response => {
+            if (!response.ok) {
+            throw new Error('Failed to response!!!!');
             }
-            return appointment;
-          });
-          setAppointments(updatedAppointments);
-          console.log(updatedAppointments)
-    }
 
-    const handleFinishAppointment = (apptID) => {
-        const updatedAppointments = appointments.map(appointment => {
-            if (appointment.id === apptID) {
-              return { ...appointment, status: "finished"};
-            }
-            return appointment;
-          });
-          setAppointments(updatedAppointments);
-          console.log(updatedAppointments)
-    }
+            const updatedAppointments = appointments.map(appointment => {
+                if (appointment.id === apptID) {
+                return { ...appointment, status: "canceled"};
+                }
+                return appointment;
+            });
+            setAppointments(updatedAppointments);
 
-    // function timeFormate(date_time_str) {
-    //     const date_time = new Date(date_time_str);
-    //     const hours = date_time.getHours();
-    //     const minutes = date_time.getMinutes();
-    //     const seconds = date_time.getSeconds();
-    //     let formatted_time;
-    //     if (hours >= 12) {
-    //     formatted_time = `${hours === 12 ? 12 : hours - 12}:${minutes}:${seconds} PM`;
-    //     } else {
-    //     formatted_time = `${hours === 0 ? 12 : hours}:${minutes}:${seconds} AM`;
-    //     }
-    //     return formatted_time;
-    // }
+        })
+        .catch(error => {
+            console.error("Error updating appointment status:", error);
+          });
+        };
+
+    const handleFinishAppointment = async (apptID) => {
+        await fetch(`http://localhost:8080/api/appointments/${apptID}/finish/`, {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+              },
+            })
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Failed to response!!!!');
+                }
+
+                const updatedAppointments = appointments.map(appointment => {
+                    if (appointment.id === apptID) {
+                    return { ...appointment, status: "finished"};
+                    }
+                    return appointment;
+                });
+                setAppointments(updatedAppointments);
+            })
+            .catch(error => {
+                console.error("Error updating appointment status:", error);
+              });
+            };
+
 
     return (
         <>
-
         <h1>Service Appointments</h1>
             <table className="table table-striped">
                 <thead>
@@ -79,11 +94,12 @@ function ServiceAppts() {
                         <td>{ appt.customer }</td>
                         <td>{ appt.date_time.split("T")[0] }</td>
                         <td>{new Date(appt.date_time).toLocaleString('en-US', {
+                                                        timeZone: 'UTC',
                                                         hour: 'numeric',
                                                         minute: 'numeric',
                                                         hour12: true,
                                                         }) }</td>
-                        {/* <td> { timeFormate(appt.date_time) } </td> */}
+
                         <td>{ appt.technician.first_name + " " + appt.technician.last_name }</td>
                         <td>{ appt.reason }</td>
                         <td>
@@ -99,8 +115,6 @@ function ServiceAppts() {
             </table>
         </>
     );
-
 }
-
 
 export default ServiceAppts;
