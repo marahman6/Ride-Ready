@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
+
 function ServiceAppts() {
 
     const [appointments, setAppointments] = useState([]);
@@ -113,6 +114,7 @@ function ServiceAppts() {
                 })}
                 </tbody>
             </table>
+
         </>
     );
 }
