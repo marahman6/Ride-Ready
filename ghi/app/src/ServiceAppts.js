@@ -17,6 +17,28 @@ function ServiceAppts() {
         fetchData();
     }, []);
 
+    const handleCancelAppointment = (apptID) => {
+        const updatedAppointments = appointments.map(appointment => {
+            if (appointment.id === apptID) {
+              return { ...appointment, status: "canceled"};
+            }
+            return appointment;
+          });
+          setAppointments(updatedAppointments);
+          console.log(updatedAppointments)
+    }
+
+    const handleFinishAppointment = (apptID) => {
+        const updatedAppointments = appointments.map(appointment => {
+            if (appointment.id === apptID) {
+              return { ...appointment, status: "finished"};
+            }
+            return appointment;
+          });
+          setAppointments(updatedAppointments);
+          console.log(updatedAppointments)
+    }
+
     // function timeFormate(date_time_str) {
     //     const date_time = new Date(date_time_str);
     //     const hours = date_time.getHours();
@@ -46,11 +68,10 @@ function ServiceAppts() {
                     <th>Technician</th>
                     <th>Reason</th>
                     <th></th>
-                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                {appointments && appointments.map(appt => {
+                {appointments && appointments.filter(appt => appt.status !== "finished" && appt.status !== "canceled").map(appt => {
                     return (
                     <tr key={appt.id}>
                         <td>{ appt.vin }</td>
@@ -65,8 +86,12 @@ function ServiceAppts() {
                         {/* <td> { timeFormate(appt.date_time) } </td> */}
                         <td>{ appt.technician.first_name + " " + appt.technician.last_name }</td>
                         <td>{ appt.reason }</td>
-                        <td><button type="button" className="btn btn-danger">Cancel</button></td>
-                        <td><button type="button" className="btn btn-success">Finish</button></td>
+                        <td>
+                            <button type="button" className="btn btn-danger" onClick={() => handleCancelAppointment(appt.id)}>Cancel</button>
+                            &nbsp;
+                            <button type="button" className="btn btn-success" onClick={() => handleFinishAppointment(appt.id)}>Finish</button>
+                        </td>
+
                     </tr>
                     );
                 })}
