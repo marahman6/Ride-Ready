@@ -4,36 +4,8 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from .models import Technician, AutomobileVO, Appointment
+from .encoders import AutomobileVOEncoder, TechnicianEncoder, AppointmentEncoder
 
-class AutomobileVOEncoder(ModelEncoder):
-    model = AutomobileVO
-    properties = ["vin", "sold"]
-
-
-class TechnicianEncoder(ModelEncoder):
-    model = Technician
-    properties = [
-        "id",
-        "first_name",
-        "last_name",
-        "employee_id",
-    ]
-
-class AppointmentEncoder(ModelEncoder):
-    model = Appointment
-    properties = [
-        "id",
-        "date_time",
-        "reason",
-        "status",
-        "vin",
-        "customer",
-        "is_vip",
-        "technician",
-    ]
-    encoders = {
-        "technician": TechnicianEncoder(),
-    }
 
 @require_http_methods(["GET", "POST"])
 def list_technicians(request):
