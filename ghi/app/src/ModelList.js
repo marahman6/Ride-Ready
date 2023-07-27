@@ -4,7 +4,7 @@ import DataFetch from './DataFetch';
 function ModelList() {
 
     const models = DataFetch('http://localhost:8100/api/models/').models;
-    console.log(models);
+
 
     return (
         <>

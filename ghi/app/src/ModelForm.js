@@ -3,7 +3,7 @@ import DataFetch from './DataFetch';
 
 function ModelForm() {
     const manufacturers = DataFetch('http://localhost:8100/api/manufacturers/').manufacturers;
-    console.log(manufacturers);
+
 
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
