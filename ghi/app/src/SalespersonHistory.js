@@ -43,6 +43,7 @@ export default function SalesHistory() {
 
     return (
         <>
+        <h1>Salesperson History</h1>
             <div className="mb-3">
                 <select onChange={handleSalespersonChange} value={selected} required id="salesperson" name="salesperson" className="form-select">
                     <option value="">Choose a salesperson</option>

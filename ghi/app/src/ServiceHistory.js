@@ -4,8 +4,16 @@ import DataFetch from './DataFetch';
 
 function ServiceHistory() {
 
-    const [appointments, setAppointments] = useState([]);
+    // // trying to achive apppiontment.is_vip from front end
+    // // ****
+    // const autoVO = DataFetch("http://localhost:8100/api/automobiles/").autos;
+    // console.log(autoVO);
+    // const vin = autoVO && autoVO.map(auto => auto.vin);
+    // console.log(vin)
+    // // ****
+    // //
 
+    const [appointments, setAppointments] = useState([]);
     const fetchData = async () => {
         const urlAppt = 'http://localhost:8080/api/appointments/';
         const response = await fetch(urlAppt);
@@ -13,6 +21,9 @@ function ServiceHistory() {
         const dataAppt = await response.json();
         setAppointments(dataAppt.appointments);
         }
+        // added
+        return true;
+        //
     }
 
     useEffect(() => {
@@ -68,6 +79,7 @@ function ServiceHistory() {
                     <tr key={appt.id}>
                         <td>{ appt.vin }</td>
                         <td>{ appt.is_vip === true ? "Yes" : "No" }</td>
+                        {/* <td>{vin && vin.find(item => item === appt.vin) ? "Y" : "N" }</td> */}
                         <td>{ appt.customer }</td>
                         <td>{ appt.date_time.split("T")[0] }</td>
                         <td>{new Date(appt.date_time).toLocaleString('en-US', {

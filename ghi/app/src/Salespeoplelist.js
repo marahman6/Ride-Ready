@@ -17,6 +17,8 @@ export default function Salespeoplelist() {
     }, []);
 
     return(
+      <>
+        <h1>Salespeople</h1>
         <table className="table table-striped">
         <thead>
           <tr>
@@ -37,5 +39,6 @@ export default function Salespeoplelist() {
           })}
         </tbody>
       </table>
+    </>
     )
 }

@@ -17,6 +17,8 @@ export default function Saleslist() {
     }, []);
 
     return(
+      <>
+      <h1>Sales</h1>
         <table className="table table-striped">
         <thead>
           <tr>
@@ -41,5 +43,6 @@ export default function Saleslist() {
           })}
         </tbody>
       </table>
+      </>
     )
 }
