@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import DataFetch from './DataFetch';
 
 
 function ServiceHistory() {
+
     const [appointments, setAppointments] = useState([]);
 
     const fetchData = async () => {
