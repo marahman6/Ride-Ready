@@ -1,20 +1,23 @@
 import React, {useEffect, useState} from 'react';
+import DataFetch from './DataFetch';
 
 function TechnicainList() {
-    const [technicians, setTechnicians] = useState([]);
+    // const [technicians, setTechnicians] = useState([]);
 
-    const fetchData = async () => {
-        const urlTechnicians = 'http://localhost:8080/api/technicians/';
-        const response = await fetch(urlTechnicians);
-        if (response.ok) {
-        const dataTechnicians = await response.json();
-        setTechnicians(dataTechnicians.technicians);
-        }
-    }
+    // const fetchData = async () => {
+    //     const urlTechnicians = 'http://localhost:8080/api/technicians/';
+    //     const response = await fetch(urlTechnicians);
+    //     if (response.ok) {
+    //     const dataTechnicians = await response.json();
+    //     setTechnicians(dataTechnicians.technicians);
+    //     }
+    // }
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
+
+    const technicians = DataFetch("http://localhost:8080/api/technicians/").technicians;
 
     return (
         <>
