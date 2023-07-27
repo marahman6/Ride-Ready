@@ -1,18 +1,14 @@
-import json
+import json, requests
 from common.json import ModelEncoder
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from .models import Salesperson, Customer, Sale, AutomobileVO
-
-
-class SalespersonEncoder(ModelEncoder):
-    model = Salesperson
-    properties = [
-        "id",
-        "first_name",
-        "last_name",
-        "employee_id",
-    ]
+from .encoders import (
+    CustomerEncoder,
+    SaleEncoder,
+    SalespersonEncoder,
+    AutomobileVOEncoder
+)
 
 
 @require_http_methods(["GET", "POST"])
@@ -61,17 +57,6 @@ def salesperson_detail(request, id):
             return JsonResponse({"message": "Does not exist"})
 
 
-class CustomerEncoder(ModelEncoder):
-    model = Customer
-    properties = [
-        "id",
-        "first_name",
-        "last_name",
-        "address",
-        "phone_number",
-    ]
-
-
 @require_http_methods(["GET", "POST"])
 def customer_list(request):
     if request.method == "GET":
@@ -106,34 +91,14 @@ def customer_detail(request, id):
             return JsonResponse({"message": "Does not exist"}, status=404)
 
 
-class AutomobileVOEncoder(ModelEncoder):
-    model = AutomobileVO
-    properties = [
-        "vin",
-        "sold",
-    ]
-
-
-class SaleEncoder(ModelEncoder):
-    model = Sale
-    properties = [
-        "id",
-        "automobile",
-        "salesperson",
-        "customer",
-        "price",
-    ]
-    encoders = {
-        "automobile": AutomobileVOEncoder(),
-        "salesperson": SalespersonEncoder(),
-        "customer": CustomerEncoder(),
-    }
-
-
 @require_http_methods(["GET", "POST"])
 def sales_list(request):
     if request.method == "GET":
-        sales = Sale.objects.all()
+        salesperson_id = request.GET.get("salesperson")
+        if salesperson_id:
+            sales = Sale.objects.filter(salesperson__id=salesperson_id)
+        else:
+            sales = Sale.objects.all()
         for sale in sales:
             sale.price = float(sale.price)
         return JsonResponse(
@@ -165,6 +130,24 @@ def sales_list(request):
         try:
             autos_detail = content["automobile"]
             automobile = AutomobileVO.objects.get(vin=autos_detail)
+            automobile.sold = True
+            automobile.save()
+
+            inventory_url = (
+                f"http://project-beta-inventory-api-1:8000/api/automobiles/{autos_detail}/"
+            )
+            inventory_data = {"sold": True}
+            inventory_response = requests.put(
+                inventory_url,
+                json=inventory_data
+            )
+
+            if not inventory_response.ok:
+                return JsonResponse(
+                    {"message": "Could not update inventory"},
+                    status=500,
+                )
+
             content["automobile"] = automobile
         except AutomobileVO.DoesNotExist:
             return JsonResponse(
