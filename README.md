@@ -3,6 +3,7 @@
 Team:
 
 * Alex Tram - Sales
+* Mohammad Arifur Rahman - Service
 
 ## Design
 
