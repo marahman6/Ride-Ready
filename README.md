@@ -20,17 +20,9 @@
 <h3 align="center">Ride Ready</h3>
 
   <p align="center">
-    Welcome to a new era of Health and Swollenness, where your journey to a healthier, fitter you begins at your fingertips. We are thrilled to introduce our revolutionary health and wellness application designed to empower you on your quest for a stronger, happier, and more energetic life. Say goodbye to fitness confusion and hello to a user-friendly, personalized approach to exercise.
+    Welcome to Ride Ready, your one-stop destination for optimizing motorcycle sales, service appointments, and inventory management! Optimizing motorcycle sales, simplifying service appointments, and improving inventory management are its strengths. A seamless experience is ensured by this innovative platform, allowing for effortless sales, streamlined appointments, and efficient inventory control.
     <br />
     <br />
-    <a href="https://gitlab.com/the-stay-at-homies/module3-project-gamma/-/blob/main/README.md?ref_type=heads"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://gitlab.com/the-stay-at-homies/module3-project-gamma/-/blob/main/README.md?ref_type=heads">View Demo</a>
-    ·
-    <a href="https://gitlab.com/WayneBasile/mod-readme/-/issues">Report Bug</a>
-    ·
-    <a href="https://gitlab.com/WayneBasile/mod-readme/-/issues">Request Feature</a>
   </p>
 </div>
 
@@ -43,7 +35,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-      <li><a href="#design">Built With</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
