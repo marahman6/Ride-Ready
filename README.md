@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project Name Screen Shot][project-screenshot]](https://the-stay-at-homies.gitlab.io/module3-project-gamma)
+[![Project Name Screen Shot][project-screenshot]](https://gitlab.com/marahman.ucf/ride-ready)
 
 A versatile automotive platform with separate sales and service departments, focused on optimizing motorcycle sales, service appointments, and inventory management.
 
@@ -107,7 +107,7 @@ Integrations - On the inventory service, this would allow us to input data to pr
 
 ### Built With
 
-[![FastAPI][Fastapi.tiangolo.com]][Fastapi-url] &nbsp; [![React][React.js]][React-url] &nbsp; [![ReactRouter][ReactRouter.com]][ReactRouter-url]
+[![React][React.js]][React-url] &nbsp; [![ReactRouter][ReactRouter.com]][ReactRouter-url]
 
 [![Docker][Docker.com]][Docker-url] &nbsp; [![Bootstrap][Bootstrap.com]][Bootstrap-url] &nbsp; [![HTML5][HTML5.com]][HTML5-url]
 
@@ -129,7 +129,7 @@ To get a local copy of Ride Ready up and running on your machine follow these si
 
 ### Installation
 
-1. Clone the [repository](https://gitlab.com/the-stay-at-homies/module3-project-gamma)
+1. Clone the [repository](https://gitlab.com/marahman.ucf/ride-ready)
 
 2. Rename the .env.sample file to .env
 
