@@ -1,13 +1,206 @@
-body {
+* body, html {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* .container-fluid {
+  left:0;
+  width: 100% !important;
+  background-color: rgb(15, 58, 99);
+} */
+
+
+#main-header {
+  background-image: url("https://images.pexels.com/photos/15269985/pexels-photo-15269985/free-photo-of-man-on-a-motorcycle-on-the-highway.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.display-5 {
+  font-size: 200px;
+  color:#fff;
+  text-shadow: 2px 2px 10px rgba(150, 0, 0, 0.3);
+}
+
+.lead {
+  color: transparent;
+  font-size: 40px;
+  -webkit-text-stroke: 2px #FF901B;
+  text-shadow: 2px 2px 5px rgba(105, 0, 124, 0.5);
+}
+/* .main-flex {
+  display:flex;
+  flex-direction: column;
+} */
+
+.bg-dark:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background: #FF901B;
+  transform: skew(-35deg);
+  transform-origin:top;
+}
+
+
+.card {
+  margin-bottom:10px;
+  padding: 20px;
+  background-color: rgba(63,87,91,0.5);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(255, 172, 77, 0.3);
+}
+
+.card-header {
+  font-size: 22px;
+  color: #fff;
+}
+
+.card-image {
+  height: 200px;
+  /* width: 300px; */
+  object-fit: cover;
+}
+
+.card-text {
+  color:#fff;
+}
+
+.logo {
+  margin-left: 50px;
+  font-size: x-large;
+  font-weight: bolder;
+  z-index:2;
+}
+
+.dropdown {
+  margin:10px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px #FF901B dashed;
+  transition: ease-in-out all .3s;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #FF901B;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 45px;
+}
+
+/* .dropdown-toggle::after {
+  content: none;
+} */
+
+.service {
+  margin-right:150px;
+}
+
+
+@media screen and (max-width: 960px) {
+  .service {
+    margin-right:0;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .ms-mobile {
+    margin:0;
+  }
+
+  .display-5 {
+    font-size: 100px;
+  }
+
+  .bg-dark:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 60px;
+    background: #FF901B;
+    transform: skew(-35deg);
+    transform-origin:top;
+  }
+}
+
+/* .card-img {
+  height: 600px;
+  border-radius: ;
+} */
+
+
+.tech-card {
+  background-image: linear-gradient(0.25turn, #d3d3d3, #fff4f7, #fffeed);
+  /* background-image: url("https://images.unsplash.com/photo-1636761358774-6c14f281d5c3"); */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form-card {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+
+.card-service {
+  margin-top:20px;
+  /* width:400px; */
+  /* height:695px; */
+  /* box-shadow: 4px 4px 5px rgba(rgb(53, 24, 108), 1); */
+  /* background-color: #FF901B; */
+  background-image: url("https://images.unsplash.com/photo-1636761358774-6c14f281d5c3");
+  /* background-image: linear-gradient(rgba(23, 94, 157, 0.6), rgba(0, 0, 0, 0.8)); */
+  /* background-blend-mode:darken; */
+  /* overflow:hidden; */
+  /* border-radius: 100px; */
+  /* opacity: 0.8; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

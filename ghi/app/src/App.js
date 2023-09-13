@@ -19,8 +19,10 @@ import TechnicianForm from './TechnicianForm';
 import ServiceApptForm from './ServiceApptForm';
 import ServiceAppts from './ServiceAppts';
 import ServiceHistory from './ServiceHistory';
+import "./index.css";
 
 function App() {
+  console.log("w");
   return (
     <BrowserRouter>
       <Nav />
