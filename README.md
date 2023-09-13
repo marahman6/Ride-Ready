@@ -14,27 +14,10 @@
 <br />
 <div align="center">
   <a href="https://gitlab.com/marahman.ucf/ride-ready">
-    <img src="ghi/public/logo.svg" alt="Logo" width="80" height="80">
+    <img src="ghi/app/public/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Ride Ready</h3>
-
-  <p align="center">
-    Welcome to a new era of Health and Swollenness, where your journey to a healthier, fitter you begins at your fingertips. We are thrilled to introduce our revolutionary health and wellness application designed to empower you on your quest for a stronger, happier, and more energetic life. Say goodbye to fitness confusion and hello to a user-friendly, personalized approach to exercise.
-    <br />
-    <br />
-    <a href="https://gitlab.com/the-stay-at-homies/module3-project-gamma/-/blob/main/README.md?ref_type=heads"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://gitlab.com/the-stay-at-homies/module3-project-gamma/-/blob/main/README.md?ref_type=heads">View Demo</a>
-    ·
-    <a href="https://gitlab.com/WayneBasile/mod-readme/-/issues">Report Bug</a>
-    ·
-    <a href="https://gitlab.com/WayneBasile/mod-readme/-/issues">Request Feature</a>
-  </p>
-</div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -162,7 +145,7 @@ To get a local copy of Ride Ready up and running on your machine follow these si
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[project-screenshot]: ghi/public/screenshot.png
+[project-screenshot]: "ghi/app/public/screenshot.png"
 
 
 [React.js]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white
