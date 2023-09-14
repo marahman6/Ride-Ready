@@ -62,8 +62,8 @@ A versatile automotive platform with separate sales and service departments, foc
 
 Team:
 
-* Alex Tram - Sales
 * Mohammad Arifur Rahman - Service
+* Alex Tram - Sales
 
 
 ## Service microservice
