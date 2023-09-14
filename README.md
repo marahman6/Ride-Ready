@@ -122,17 +122,13 @@ To get a local copy of Ride Ready up and running on your machine follow these si
 
 1. Clone the [repository](https://gitlab.com/marahman.ucf/ride-ready)
 
-2. Rename the .env.sample file to .env
+2. Run `docker volume create beta-data`
 
-3. Remove the .gitlab-ci.yml file
+3. Run `docker compose build`
 
-4. Run `docker volume create beta-data`
+4. Run `docker compose up`
 
-5. Run `docker compose build`
-
-6. Run `docker compose up`
-
-7. Navigate to [localhost:3000](http://localhost:3000/)
+5. Navigate to [localhost:3000](http://localhost:3000/)
 
 
 
