@@ -60,7 +60,7 @@ A versatile automotive platform with separate sales and service departments, foc
 
 ### Design
 
-Team:
+Team Members:
 
 * Mohammad Arifur Rahman - Service
 * Alex Tram - Sales
