@@ -59,7 +59,7 @@ function TechnicianForm() {
           <div class="card bg-light">
             <div class="row card-body">
             <h3 className='text-center'>Add a Technician</h3>
-              <div class="col-sm-6">
+              <div class="col-12">
                 <div>
                   <form onSubmit={handleSubmit} id="create-location-form">
                     <div className="form-floating mb-3">
@@ -74,11 +74,13 @@ function TechnicianForm() {
                       <input onChange={handleEmployeeIDChange} placeholder="Employee ID" value={employeeID} required type="text" name="employeeID" id="employeeID" className="form-control" />
                       <label htmlFor="employeeID">Employee ID</label>
                     </div>
-                    <button className="btn btn-primary">Create</button>
+                    <div className="d-flex justify-content-center">
+                      <button className="btn btn-primary btn-ride">Create</button>
+                    </div>
                   </form>
                 </div>
               </div>
-              <img class="col-sm-6" src="https://images.unsplash.com/photo-1636761358774-6c14f281d5c3" alt="sans" />
+              {/* <img class="col-sm-6 card-image" src="https://images.pexels.com/photos/4488647/pexels-photo-4488647.jpeg" alt="sans" /> */}
             </div>
           </div>
         </div>

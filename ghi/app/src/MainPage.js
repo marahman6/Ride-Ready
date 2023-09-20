@@ -26,7 +26,7 @@ function MainPage() {
         <h1 className="display-5 fw-bold">RIDE READY</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
-            The premiere solution for motorcycle dealership management!
+            The premiere solution for automobile dealership management!
           </p>
         </div>
         <FeaturedCard />
@@ -35,10 +35,10 @@ function MainPage() {
             <div className="col-md-4">
               <div className="card border-primary mx-3">
                 <div className="card-header">INVENTORY</div>
-                <img className="card-img-top card-image" src="https://images.pexels.com/photos/2629412/pexels-photo-2629412.jpeg" alt="Card image cap"></img>
+                <img className="card-img-top card-image" src="https://images.pexels.com/photos/14065384/pexels-photo-14065384.jpeg" alt="Card image cap"></img>
                 <div className="card-body text-primary">
                   <p className="card-text">
-                  Our inventory service simplifies motorcycle business operations. Easily create and manage manufacturers, streamline motorcycle model oversight, and optimize inventory control. Enhance efficiency and elevate your motorcycle dealership with our comprehensive inventory service – the ultimate tool for modern businesses.
+                  Our inventory service simplifies automobile business operations. Easily create and manage manufacturers, streamline automobile model oversight, and optimize inventory control. Enhance efficiency and elevate your automobile dealership with our comprehensive inventory service – the ultimate tool for modern businesses.
                   </p>
                 </div>
               </div>
@@ -46,7 +46,7 @@ function MainPage() {
             <div className="col-md-4">
             <div className="card border-primary mx-3">
                 <div className="card-header">SALES</div>
-                <img className="card-img-top card-image" src="https://images.pexels.com/photos/12846643/pexels-photo-12846643.jpeg" alt="Card image cap"></img>
+                <img className="card-img-top card-image" src="https://images.pexels.com/photos/97079/pexels-photo-97079.jpeg" alt="Card image cap"></img>
                 <div className="card-body text-primary">
                   <p className="card-text">
                   Our web application sales service is your solution for efficient sales management. Create and oversee sales, manage salespersons effortlessly, and track their history with a dedicated page. Additionally, create and manage customer profiles, all within one intuitive platform, to supercharge your sales operations.
@@ -92,7 +92,7 @@ export default MainPage;
 //         <h1 className="display-5 fw-bold">RIDE READY</h1>
 //         <div className="col-lg-6 mx-auto">
 //           <p className="lead mb-4">
-//             The premiere solution for motorcycle dealership
+//             The premiere solution for automobile dealership
 //             management!
 //           </p>
 //         </div>

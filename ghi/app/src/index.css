@@ -21,7 +21,7 @@
 
 
 #main-header {
-  background-image: url("https://images.pexels.com/photos/15269985/pexels-photo-15269985/free-photo-of-man-on-a-motorcycle-on-the-highway.jpeg");
+  background-image: url("https://images.pexels.com/photos/6894436/pexels-photo-6894436.jpeg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,9 +41,9 @@
 }
 
 .lead {
-  color: transparent;
+  color: #fff;
   font-size: 40px;
-  -webkit-text-stroke: 2px #FF901B;
+  /* -webkit-text-stroke: 1px #FF901B; */
   text-shadow: 2px 2px 5px rgba(105, 0, 124, 0.5);
 }
 /* .main-flex {
@@ -67,10 +67,10 @@
 .card {
   margin-bottom:10px;
   padding: 20px;
-  background-color: rgba(63,87,91,0.5);
+  background-color: rgba(222, 222, 222, 0.5);
   border: 0;
   border-radius: 10px;
-  box-shadow: 1px 1px 20px rgba(255, 172, 77, 0.3);
+  box-shadow: 1px 1px 20px rgba(187, 187, 187, 0.3);
 }
 
 .card-header {
@@ -158,15 +158,31 @@
   }
 }
 
+.btn-ride {
+  background-color: #FF901B;
+  padding: 10px 50px;
+  border:2px solid #fff;
+  transition: ease all 0.3s;
+}
+
+.btn-ride:hover {
+  background-color: #ffffff;
+  color: #FF901B;
+  border:2px solid #FF901B;
+}
+
+
+
+
 /* .card-img {
   height: 600px;
   border-radius: ;
 } */
 
 
-.tech-card {
+/* .tech-card {
   background-image: linear-gradient(0.25turn, #d3d3d3, #fff4f7, #fffeed);
-  /* background-image: url("https://images.unsplash.com/photo-1636761358774-6c14f281d5c3"); */
+
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -176,12 +192,12 @@
   left: 0;
   overflow-y: scroll;
   overflow-x: hidden;
-}
+} */
 
-.form-card {
+/* .form-card {
   background-color: #fff;
   border-radius: 15px;
-}
+} */
 
 
 .card-service {
@@ -190,7 +206,7 @@
   /* height:695px; */
   /* box-shadow: 4px 4px 5px rgba(rgb(53, 24, 108), 1); */
   /* background-color: #FF901B; */
-  background-image: url("https://images.unsplash.com/photo-1636761358774-6c14f281d5c3");
+  background-image: url("https://images.pexels.com/photos/4488647/pexels-photo-4488647.jpeg");
   /* background-image: linear-gradient(rgba(23, 94, 157, 0.6), rgba(0, 0, 0, 0.8)); */
   /* background-blend-mode:darken; */
   /* overflow:hidden; */

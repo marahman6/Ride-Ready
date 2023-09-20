@@ -20,7 +20,7 @@
 <h3 align="center">Ride Ready</h3>
 
   <p align="center">
-    Welcome to Ride Ready, your one-stop destination for optimizing motorcycle sales, service appointments, and inventory management! Optimizing motorcycle sales, simplifying service appointments, and improving inventory management are its strengths. A seamless experience is ensured by this innovative platform, allowing for effortless sales, streamlined appointments, and efficient inventory control.
+    Welcome to Ride Ready, your one-stop destination for optimizing automobile sales, service appointments, and inventory management! Optimizing car sales, simplifying service appointments, and improving inventory management are its strengths. A seamless experience is ensured by this innovative platform, allowing for effortless sales, streamlined appointments, and efficient inventory control.
     <br />
     <br />
   </p>
@@ -56,7 +56,7 @@
 
 [![Project Name Screen Shot][project-screenshot]](https://gitlab.com/marahman.ucf/ride-ready)
 
-A versatile automotive platform with separate sales and service departments, focused on optimizing motorcycle sales, service appointments, and inventory management.
+A versatile automotive platform with separate sales and service departments, focused on optimizing automobile sales, service appointments, and inventory management.
 
 ### Design
 
